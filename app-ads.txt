@@ -1,0 +1,19 @@
+# =====================================================================
+# app-ads.txt — WildByte Games
+# Este archivo DEBE estar en la raíz del dominio:  https://TU-DOMINIO/app-ads.txt
+# y ese dominio debe coincidir con el "Sitio web del desarrollador" de tu
+# ficha en Google Play Console.
+#
+# CÓMO ACTIVARLO CON ADMOB:
+#  1. Entra en AdMob > Apps > Ver todas las apps > app-ads.txt
+#     (o en AdMob > Configuración > Información de la cuenta) y copia tu
+#     ID de editor, que tiene este formato:  pub-1234567890123456
+#  2. Borra el "# " del principio de la línea de abajo y sustituye
+#     pub-0000000000000000 por tu ID real. No cambies el resto.
+#  3. Sube el archivo y espera hasta 24 h a que AdMob lo verifique.
+#
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+#
+# OTRAS REDES (Unity Ads, AppLovin, ironSource, Meta...): cada red te da
+# su propia línea en su panel. Pégala debajo, una red por línea.
+# =====================================================================

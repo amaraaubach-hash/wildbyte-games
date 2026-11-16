@@ -1,0 +1,7 @@
+Coloca aquí las imágenes de Zoo: War of Paws con estos nombres exactos
+y la web las mostrará automáticamente (sin tocar el HTML):
+
+  icono.png     -> icono del juego (cuadrado, ej. 512x512, fondo transparente)
+  portada.png   -> imagen principal de la tarjeta (PNG transparente o 16:10)
+
+Mientras no existan, la web muestra un recuadro "Imagen próximamente".

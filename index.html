@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WildByte Games — Estudio indie de videojuegos para móvil</title>
+  <meta name="description" content="WildByte Games es un estudio indie de videojuegos. Creadores de Zoo: War of Paws y Crazy Cube Battle. Patrocinios, prensa y colaboraciones.">
+  <meta name="theme-color" content="#0a0c16">
+  <link rel="icon" type="image/svg+xml" href="assets/img/wildbyte-logo.svg">
+
+  <!-- Vista previa al compartir en redes -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="WildByte Games — Estudio indie de videojuegos">
+  <meta property="og:description" content="Juegos de acción, batallas y gestión para móvil. Descubre Zoo: War of Paws y Crazy Cube Battle.">
+  <meta property="og:image" content="assets/img/crazy-cube-battle/logo-crazy-cube-battle.png">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===================== CABECERA ===================== -->
+  <header class="site-header">
+    <nav class="container nav" aria-label="Principal">
+      <a class="brand" href="index.html" aria-label="WildByte Games, inicio">
+        <img class="brand-logo" src="assets/img/wildbyte-logo.svg" alt="" width="40" height="40">
+        <span class="brand-name">Wild<span>Byte</span> Games</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú">
+        <span class="nav-toggle-bars"></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#juegos">Juegos</a></li>
+        <li><a href="#patrocinadores">Patrocinadores / Prensa</a></li>
+        <li><a href="privacidad.html">Política de Privacidad</a></li>
+        <li class="nav-cta"><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Estudio indie de videojuegos</p>
+          <h1 class="hero-title">Juegos <span class="grad">salvajes</span>,<br>hechos byte a byte.</h1>
+          <p class="hero-text">
+            En WildByte Games creamos juegos para móvil llenos de acción, coleccionables y
+            mundos de colores. Diseñamos, programamos y cuidamos cada detalle de forma independiente.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#juegos">Ver nuestros juegos</a>
+            <a class="btn btn-ghost" href="#patrocinadores">Patrocina un juego</a>
+          </div>
+          <div class="hero-stats" aria-label="El estudio en cifras">
+            <div class="hero-stat"><strong>2</strong><span>juegos en marcha</span></div>
+            <div class="hero-stat"><strong>Android</strong><span>Google Play</span></div>
+            <div class="hero-stat"><strong>100%</strong><span>independiente</span></div>
+          </div>
+        </div>
+
+        <!-- Escenario interactivo: arrastra las imágenes -->
+        <div class="drag-zone hero-stage" data-drag-zone aria-label="Escenario interactivo: arrastra las imágenes con el ratón o el dedo">
+          <div class="drag-item" data-draggable tabindex="0" style="--x:5%;--y:6%;--w:27%" aria-label="Mascota loro, arrastrable">
+            <div class="float d1"><img src="assets/img/crazy-cube-battle/mascota-loro.png" alt="Mascota loro cúbico de Crazy Cube Battle" width="343" height="321"></div>
+          </div>
+          <div class="drag-item" data-draggable tabindex="0" style="--x:59%;--y:5%;--w:33%" aria-label="Trofeo dorado, arrastrable">
+            <div class="float d2"><img src="assets/img/crazy-cube-battle/trofeo.png" alt="Trofeo dorado del ranking mundial" width="520" height="500"></div>
+          </div>
+          <div class="drag-item" data-draggable tabindex="0" style="--x:3%;--y:46%;--w:60%" aria-label="Caballeros vóxel, arrastrable">
+            <div class="float"><img src="assets/img/crazy-cube-battle/caballeros-batalla.png" alt="Dos caballeros vóxel cruzando espadas" width="820" height="461"></div>
+          </div>
+          <div class="drag-item" data-draggable tabindex="0" style="--x:62%;--y:50%;--w:35%" aria-label="Mascota pavo real, arrastrable">
+            <div class="float d3"><img src="assets/img/crazy-cube-battle/mascota-pavo-real.png" alt="Mascota pavo real cúbico" width="350" height="299"></div>
+          </div>
+          <span class="drag-hint" aria-hidden="true">✋ ¡Arrástralos con el ratón o el dedo!</span>
+          <button class="drag-reset" type="button" data-drag-reset>↺ Recolocar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== JUEGOS ===================== -->
+    <section class="section" id="juegos">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Portfolio</p>
+          <h2 class="section-title">Nuestros juegos</h2>
+          <p class="section-lead">Cada proyecto nace con una idea sencilla: que sea divertido desde el primer minuto y que siempre haya algo nuevo por conseguir.</p>
+        </div>
+
+        <div class="games-grid">
+
+          <!-- ---------- Juego 1: Zoo: War of Paws ---------- -->
+          <article class="game-card" aria-labelledby="zoo-title">
+            <div class="drag-zone game-media" data-drag-zone>
+              <!-- Hueco preparado: aparece mientras no exista assets/img/zoo-war-of-paws/portada.png -->
+              <div class="placeholder" aria-hidden="true">
+                <strong>Imagen próximamente</strong>
+                <span>Guarda la portada como</span>
+                <code>assets/img/zoo-war-of-paws/portada.png</code>
+              </div>
+              <div class="drag-item" data-draggable tabindex="0" style="--x:10%;--y:8%;--w:80%" aria-label="Portada de Zoo: War of Paws, arrastrable">
+                <img src="assets/img/zoo-war-of-paws/portada.png" alt="Portada de Zoo: War of Paws"
+                     onload="this.closest('.game-media').querySelector('.placeholder').hidden=true"
+                     onerror="this.closest('.drag-item').remove()">
+              </div>
+              <span class="drag-hint" aria-hidden="true">✋ Arrastra la imagen</span>
+              <button class="drag-reset" type="button" data-drag-reset>↺ Recolocar</button>
+            </div>
+
+            <div class="game-body">
+              <div class="game-top">
+                <!-- Icono: guarda assets/img/zoo-war-of-paws/icono.png -->
+                <img class="game-icon" src="assets/img/zoo-war-of-paws/icono.png" alt="Icono de Zoo: War of Paws" width="60" height="60"
+                     onerror="this.onerror=null;this.src='assets/img/wildbyte-logo.svg'">
+                <h3 class="game-title" id="zoo-title">Zoo: War of Paws</h3>
+              </div>
+              <div class="badges">
+                <span class="badge badge-testing">En pruebas · Google Play</span>
+                <span class="badge badge-tag">Acción</span>
+                <span class="badge badge-tag">Gestión</span>
+              </div>
+              <p class="game-desc">
+                Recorre el mundo capturando animales con dardos tranquilizantes y llévalos a tu propio
+                zoológico. Constrúyelo, mejóralo y conviértelo en el más espectacular del planeta.
+              </p>
+              <ul class="features">
+                <li>Expediciones por distintos lugares del mundo</li>
+                <li>Captura animales con dardos tranquilizantes</li>
+                <li>Construye, decora y mejora tu zoológico</li>
+              </ul>
+              <div class="game-actions">
+                <!-- CAMBIA el enlace por el de tu ficha. En prueba cerrada usa el enlace de "unirse a la prueba"
+                     que te da Play Console (https://play.google.com/apps/testing/TU.PAQUETE). -->
+                <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.globalzoo.pawofwars" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.6v18.8c0 .5.5.8.9.6L21 12.9c.4-.2.4-.8 0-1L4.9 2c-.4-.2-.9.1-.9.6z"/></svg>
+                  Probar en Google Play
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------- Juego 2: Crazy Cube Battle ---------- -->
+          <article class="game-card" aria-labelledby="ccb-title">
+            <div class="drag-zone game-media" data-drag-zone>
+              <img class="game-media-bg dim" src="assets/img/crazy-cube-battle/arena-helada.jpg" alt="" loading="lazy" width="1280" height="720">
+              <div class="drag-item" data-draggable tabindex="0" style="--x:12%;--y:7%;--w:76%" aria-label="Logo de Crazy Cube Battle, arrastrable">
+                <img src="assets/img/crazy-cube-battle/logo-crazy-cube-battle.png" alt="Logo de Crazy Cube Battle" width="900" height="506" loading="lazy">
+              </div>
+              <span class="drag-hint" aria-hidden="true">✋ Arrastra el logo</span>
+              <button class="drag-reset" type="button" data-drag-reset>↺ Recolocar</button>
+            </div>
+
+            <div class="game-body">
+              <div class="game-top">
+                <img class="game-icon" src="assets/img/crazy-cube-battle/mascota-loro.png" alt="Icono de Crazy Cube Battle" width="60" height="60" loading="lazy">
+                <h3 class="game-title" id="ccb-title">Crazy Cube Battle</h3>
+              </div>
+              <div class="badges">
+                <span class="badge badge-dev">En desarrollo</span>
+                <span class="badge badge-tag">PvP</span>
+                <span class="badge badge-tag">Crafteo</span>
+              </div>
+              <p class="game-desc">
+                Batallas entre jugadores en un mundo de cubos. Derrota bosses, gana monedas y skins,
+                craftea tus propias armas y pociones y escala hasta el número 1 del ranking mundial.
+              </p>
+              <ul class="features">
+                <li>Combates PvP y jefes épicos</li>
+                <li>Crafteo de armas y pociones</li>
+                <li>Skins, monedas y ranking mundial</li>
+              </ul>
+              <div class="game-actions">
+                <span class="btn btn-disabled" aria-disabled="true">Próximamente</span>
+                <a class="btn btn-ghost" href="#galeria">Ver galería</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ---------- Galería interactiva de Crazy Cube Battle ---------- -->
+        <div class="showcase" id="galeria">
+          <div class="drag-zone showcase-stage" data-drag-zone aria-label="Galería interactiva: arrastra a los personajes por el mapa">
+            <img class="game-media-bg" src="assets/img/crazy-cube-battle/mapa-isla-lava-nieve.jpg" alt="" loading="lazy" width="1280" height="721">
+            <div class="drag-item is-character" data-draggable tabindex="0" style="--x:6%;--y:26%;--w:24%" aria-label="Personaje agente, arrastrable">
+              <div class="float"><img src="assets/img/crazy-cube-battle/personaje-agente.png" alt="Personaje vóxel con gafas de sol y arma" width="303" height="219" loading="lazy"></div>
+            </div>
+            <div class="drag-item is-character" data-draggable tabindex="0" style="--x:31%;--y:20%;--w:19%" aria-label="Personaje demonio, arrastrable">
+              <div class="float d1"><img src="assets/img/crazy-cube-battle/personaje-demonio.png" alt="Personaje vóxel con cuernos" width="235" height="240" loading="lazy"></div>
+            </div>
+            <div class="drag-item is-character" data-draggable tabindex="0" style="--x:53%;--y:32%;--w:18%" aria-label="Personaje gata, arrastrable">
+              <div class="float d2"><img src="assets/img/crazy-cube-battle/personaje-gata.png" alt="Personaje vóxel con orejas de gato" width="219" height="245" loading="lazy"></div>
+            </div>
+            <div class="drag-item is-character" data-draggable tabindex="0" style="--x:76%;--y:20%;--w:15%" aria-label="Personaje guerrera, arrastrable">
+              <div class="float d3"><img src="assets/img/crazy-cube-battle/personaje-guerrera.png" alt="Personaje vóxel con gorro rojo" width="183" height="270" loading="lazy"></div>
+            </div>
+            <span class="drag-hint" aria-hidden="true">✋ Mueve a los luchadores por el mapa</span>
+            <button class="drag-reset" type="button" data-drag-reset>↺ Recolocar</button>
+          </div>
+
+          <div class="showcase-side">
+            <div>
+              <p class="eyebrow">Crazy Cube Battle · Galería</p>
+              <h3 class="showcase-title">Conoce a los luchadores</h3>
+              <p class="section-lead" style="font-size:1rem">
+                Un primer vistazo a los personajes y escenarios en desarrollo. ¡Arrástralos por la isla de lava y nieve!
+              </p>
+            </div>
+            <figure class="shot">
+              <img src="assets/img/crazy-cube-battle/arena-helada.jpg" alt="Arena helada bajo nubes de tormenta, escenario de Crazy Cube Battle" loading="lazy" width="1280" height="720">
+              <figcaption>Arena helada — concept del escenario</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PATROCINADORES / PRENSA ===================== -->
+    <section class="section sponsors" id="patrocinadores">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" style="color:var(--gold)">Press &amp; Sponsors</p>
+          <h2 class="section-title">Patrocinadores, inversores y prensa</h2>
+          <p class="section-lead">
+            Buscamos marcas, publishers e inversores que quieran crecer con nosotros. Trabajamos de forma
+            cercana y flexible para crear colaboraciones que encajen con nuestros jugadores.
+          </p>
+        </div>
+
+        <div class="sponsor-grid">
+          <div class="sponsor-card">
+            <div class="sponsor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 6 6 .9-4.5 4.4 1 6.2L12 16.6 6.5 19.5l1-6.2L3 8.9 9 8z"/></svg></div>
+            <h3>Marca dentro del juego</h3>
+            <p>Skins, objetos, escenarios o eventos patrocinados que los jugadores disfrutan, no que se saltan.</p>
+          </div>
+          <div class="sponsor-card">
+            <div class="sponsor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0V4zM17 5h3v2a3 3 0 01-3 3M7 5H4v2a3 3 0 003 3"/></svg></div>
+            <h3>Torneos y rankings</h3>
+            <p>Competiciones con premios y presencia de marca en el ranking mundial de Crazy Cube Battle.</p>
+          </div>
+          <div class="sponsor-card">
+            <div class="sponsor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8M14 7h7v7"/></svg></div>
+            <h3>Inversión y publishing</h3>
+            <p>Abiertos a acuerdos de publishing, financiación o coproducción para acelerar el lanzamiento.</p>
+          </div>
+          <div class="sponsor-card">
+            <div class="sponsor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/></svg></div>
+            <h3>Creadores y medios</h3>
+            <p>Acceso anticipado, códigos y material exclusivo para streamers, YouTubers, TikTokers y prensa.</p>
+          </div>
+        </div>
+
+        <div class="press-box">
+          <div>
+            <h3>Press Kit</h3>
+            <p>Logos, capturas, personajes y ficha del estudio listos para usar en artículos, vídeos o propuestas comerciales.</p>
+            <div class="hero-actions" style="margin-top:18px">
+              <a class="btn btn-primary" href="mailto:amaraaubach@gmail.com?subject=Propuesta%20de%20patrocinio%20-%20WildByte%20Games">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
+                Contacto comercial
+              </a>
+              <a class="btn btn-ghost" href="assets/press/wildbyte-presskit.zip" download>Descargar Press Kit (.zip)</a>
+            </div>
+          </div>
+          <div class="press-links">
+            <a class="press-link" href="assets/img/wildbyte-logo.svg" download>
+              <span>Logo del estudio <small>· SVG</small></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            </a>
+            <a class="press-link" href="assets/img/crazy-cube-battle/logo-crazy-cube-battle.png" download>
+              <span>Logo Crazy Cube Battle <small>· PNG transparente</small></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            </a>
+            <a class="press-link" href="assets/img/crazy-cube-battle/mapa-isla-lava-nieve.jpg" download>
+              <span>Captura: isla de lava y nieve <small>· JPG</small></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            </a>
+            <a class="press-link" href="assets/img/crazy-cube-battle/arena-helada.jpg" download>
+              <span>Captura: arena helada <small>· JPG</small></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Contacto</p>
+          <h2 class="section-title">Hablemos</h2>
+          <p class="section-lead">Soporte a jugadores, prensa, patrocinios o cualquier idea: respondemos a todos los correos.</p>
+        </div>
+        <div class="contact-card">
+          <div>
+            <p style="color:var(--muted);margin:0 0 6px;font-weight:700">Escríbenos a</p>
+            <a class="contact-email" href="mailto:amaraaubach@gmail.com">amaraaubach@gmail.com</a>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-secondary" href="mailto:amaraaubach@gmail.com?subject=Soporte%20-%20WildByte%20Games">Soporte</a>
+            <a class="btn btn-primary" href="mailto:amaraaubach@gmail.com?subject=Patrocinio%20%2F%20Prensa%20-%20WildByte%20Games">Patrocinio / Prensa</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== PIE ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="assets/img/wildbyte-logo.svg" alt="" width="40" height="40">
+          <span class="brand-name">Wild<span>Byte</span> Games</span>
+        </a>
+        <ul class="footer-links">
+          <li><a href="#juegos">Juegos</a></li>
+          <li><a href="#patrocinadores">Patrocinadores / Prensa</a></li>
+          <li><a href="privacidad.html">Política de Privacidad</a></li>
+          <li><a class="footer-mail" href="mailto:amaraaubach@gmail.com">amaraaubach@gmail.com</a></li>
+        </ul>
+      </div>
+      <p class="copyright">© <span id="year">2026</span> WildByte Games. Todos los derechos reservados. Google Play y el logotipo de Google Play son marcas de Google LLC.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
