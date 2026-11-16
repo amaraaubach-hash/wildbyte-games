@@ -32,6 +32,7 @@
       </button>
 
       <ul class="nav-links" id="nav-links">
+        <li><a href="#testers">Testers</a></li>
         <li><a href="#juegos">Juegos</a></li>
         <li><a href="#patrocinadores">Patrocinadores / Prensa</a></li>
         <li><a href="privacidad.html">Política de Privacidad</a></li>
@@ -42,12 +43,41 @@
 
   <main id="contenido">
 
+    <!-- ===================== BLOQUE TESTERS (temporal) =====================
+         Para quitarlo más adelante, borra desde aquí hasta "FIN BLOQUE TESTERS". -->
+    <section class="testers" id="testers" aria-labelledby="testers-title">
+      <div class="container">
+        <div class="testers-card">
+          <div class="testers-info">
+            <span class="testers-pill">🧪 Buscamos testers</span>
+            <h2 class="testers-title" id="testers-title">¡Hazte tester de <span>Zoo: War of Paws</span>!</h2>
+            <p class="testers-text">Juega antes que nadie, ayúdanos a encontrar fallos y deja tu huella en el juego.</p>
+            <ol class="testers-steps">
+              <li><b>1</b> Pulsa «Unirme como tester»</li>
+              <li><b>2</b> Acepta con tu cuenta de Google</li>
+              <li><b>3</b> Descarga el juego desde Google Play</li>
+            </ol>
+          </div>
+          <div class="testers-actions">
+            <a class="btn btn-primary btn-lg" href="https://play.google.com/apps/testing/com.globalzoo.pawofwars" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.6v18.8c0 .5.5.8.9.6L21 12.9c.4-.2.4-.8 0-1L4.9 2c-.4-.2-.9.1-.9.6z"/></svg>
+              Unirme como tester
+            </a>
+            <a class="testers-help" href="mailto:amaraaubach@gmail.com?subject=Quiero%20ser%20tester%20de%20Zoo%3A%20War%20of%20Paws&amp;body=Hola%2C%20quiero%20ser%20tester.%20Mi%20correo%20de%20Google%20Play%20es%3A%20">
+              ¿El enlace no te deja entrar? Escríbenos tu correo de Google y te añadimos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== FIN BLOQUE TESTERS ===================== -->
+
     <!-- ===================== HERO ===================== -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Estudio indie de videojuegos</p>
-          <h1 class="hero-title">Juegos <span class="grad">salvajes</span>,<br>hechos byte a byte.</h1>
+          <h1 class="hero-title">Juegos <span class="grad">salvajes</span>, <br>hechos byte a byte.</h1>
           <p class="hero-text">
             En WildByte Games creamos juegos para móvil llenos de acción, coleccionables y
             mundos de colores. Diseñamos, programamos y cuidamos cada detalle de forma independiente.
@@ -134,11 +164,11 @@
                 <li>Construye, decora y mejora tu zoológico</li>
               </ul>
               <div class="game-actions">
-                <!-- CAMBIA el enlace por el de tu ficha. En prueba cerrada usa el enlace de "unirse a la prueba"
-                     que te da Play Console (https://play.google.com/apps/testing/TU.PAQUETE). -->
-                <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.globalzoo.pawofwars" target="_blank" rel="noopener">
+                <!-- Enlace para testers (prueba cerrada). Cuando el juego sea público cámbialo por:
+                     https://play.google.com/store/apps/details?id=com.globalzoo.pawofwars -->
+                <a class="btn btn-primary" href="https://play.google.com/apps/testing/com.globalzoo.pawofwars" target="_blank" rel="noopener">
                   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.6v18.8c0 .5.5.8.9.6L21 12.9c.4-.2.4-.8 0-1L4.9 2c-.4-.2-.9.1-.9.6z"/></svg>
-                  Probar en Google Play
+                  Unirme como tester
                 </a>
               </div>
             </div>
@@ -183,33 +213,43 @@
         </div>
 
         <!-- ---------- Galería interactiva de Crazy Cube Battle ---------- -->
-        <div class="showcase" id="galeria">
-          <div class="drag-zone showcase-stage" data-drag-zone aria-label="Galería interactiva: arrastra a los personajes por el mapa">
-            <img class="game-media-bg" src="assets/img/crazy-cube-battle/mapa-isla-lava-nieve.jpg" alt="" loading="lazy" width="1280" height="721">
-            <div class="drag-item is-character" data-draggable tabindex="0" style="--x:6%;--y:26%;--w:24%" aria-label="Personaje agente, arrastrable">
+        <div class="roster" id="galeria">
+          <div class="roster-head">
+            <div>
+              <p class="eyebrow">Crazy Cube Battle · Galería</p>
+              <h3 class="showcase-title">Elige tu luchador</h3>
+            </div>
+            <p class="section-lead">Un primer vistazo a los personajes en desarrollo. ¡Arrástralos y ponlos frente a frente!</p>
+          </div>
+
+          <div class="drag-zone roster-stage" data-drag-zone aria-label="Personajes de Crazy Cube Battle: arrástralos con el ratón o el dedo">
+            <!-- Pedestales (fijos) -->
+            <span class="pedestal slot-1" aria-hidden="true"></span>
+            <span class="pedestal slot-2" aria-hidden="true"></span>
+            <span class="pedestal slot-3" aria-hidden="true"></span>
+            <span class="pedestal slot-4" aria-hidden="true"></span>
+            <!-- Personajes (arrastrables) -->
+            <div class="drag-item is-character fighter slot-1" data-draggable tabindex="0" aria-label="Personaje agente, arrastrable">
               <div class="float"><img src="assets/img/crazy-cube-battle/personaje-agente.png" alt="Personaje vóxel con gafas de sol y arma" width="303" height="219" loading="lazy"></div>
             </div>
-            <div class="drag-item is-character" data-draggable tabindex="0" style="--x:31%;--y:20%;--w:19%" aria-label="Personaje demonio, arrastrable">
+            <div class="drag-item is-character fighter slot-2" data-draggable tabindex="0" aria-label="Personaje demonio, arrastrable">
               <div class="float d1"><img src="assets/img/crazy-cube-battle/personaje-demonio.png" alt="Personaje vóxel con cuernos" width="235" height="240" loading="lazy"></div>
             </div>
-            <div class="drag-item is-character" data-draggable tabindex="0" style="--x:53%;--y:32%;--w:18%" aria-label="Personaje gata, arrastrable">
+            <div class="drag-item is-character fighter slot-3" data-draggable tabindex="0" aria-label="Personaje gata, arrastrable">
               <div class="float d2"><img src="assets/img/crazy-cube-battle/personaje-gata.png" alt="Personaje vóxel con orejas de gato" width="219" height="245" loading="lazy"></div>
             </div>
-            <div class="drag-item is-character" data-draggable tabindex="0" style="--x:76%;--y:20%;--w:15%" aria-label="Personaje guerrera, arrastrable">
+            <div class="drag-item is-character fighter slot-4" data-draggable tabindex="0" aria-label="Personaje guerrera, arrastrable">
               <div class="float d3"><img src="assets/img/crazy-cube-battle/personaje-guerrera.png" alt="Personaje vóxel con gorro rojo" width="183" height="270" loading="lazy"></div>
             </div>
-            <span class="drag-hint" aria-hidden="true">✋ Mueve a los luchadores por el mapa</span>
+            <span class="drag-hint" aria-hidden="true">✋ Arrastra a los luchadores</span>
             <button class="drag-reset" type="button" data-drag-reset>↺ Recolocar</button>
           </div>
 
-          <div class="showcase-side">
-            <div>
-              <p class="eyebrow">Crazy Cube Battle · Galería</p>
-              <h3 class="showcase-title">Conoce a los luchadores</h3>
-              <p class="section-lead" style="font-size:1rem">
-                Un primer vistazo a los personajes y escenarios en desarrollo. ¡Arrástralos por la isla de lava y nieve!
-              </p>
-            </div>
+          <div class="scenes">
+            <figure class="shot">
+              <img src="assets/img/crazy-cube-battle/mapa-isla-lava-nieve.jpg" alt="Isla de lava y nieve, mapa de Crazy Cube Battle" loading="lazy" width="1280" height="721">
+              <figcaption>Isla de lava y nieve — mapa en desarrollo</figcaption>
+            </figure>
             <figure class="shot">
               <img src="assets/img/crazy-cube-battle/arena-helada.jpg" alt="Arena helada bajo nubes de tormenta, escenario de Crazy Cube Battle" loading="lazy" width="1280" height="720">
               <figcaption>Arena helada — concept del escenario</figcaption>

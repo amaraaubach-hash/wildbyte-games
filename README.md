@@ -33,7 +33,7 @@ sube el contenido de esta carpeta a la raíz y activa *Settings → Pages → De
 
 ## Pendiente de personalizar
 
-1. `index.html` → enlace de Google Play de *Zoo: War of Paws* (busca `com.globalzoo.pawofwars`).
+1. `index.html` → el bloque de testers está marcado con comentarios: bórralo cuando ya no lo necesites. Cuando el juego sea público, cambia los enlaces de testers por el de la ficha de Google Play.
 2. `app-ads.txt` → tu ID de editor de AdMob (`pub-...`) cuando monetices.
 3. `privacidad.html` → si WildByte Games no es una empresa registrada, añade tu nombre como titular (hay un comentario preparado).
 4. Play Console → *Ficha de Play Store → Detalles de contacto → Sitio web*: pon la URL raíz de la web.
