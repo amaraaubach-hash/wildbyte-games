@@ -596,8 +596,18 @@ section { position: relative; }
 .build-card.is-dragging .tilt { transform: rotate(0deg); }
 .build-card img { filter: drop-shadow(0 16px 20px rgba(0, 0, 0, .55)); }
 
-.zoo-shots { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: clamp(20px, 4vw, 48px); margin-top: 40px; align-items: center; }
-.yt-panel p { color: var(--muted); }
+.zoo-shots { display: grid; grid-template-columns: 1fr; gap: clamp(20px, 4vw, 48px); margin-top: 40px; align-items: center; }
+.yt-panel p { color: var(--muted); max-width: 60ch; }
+.yt-panel { text-align: center; display: grid; justify-items: center; padding: clamp(22px, 4vw, 36px); border-radius: var(--radius);
+  background: radial-gradient(500px 200px at 50% 0%, rgba(255, 0, 51, .16), transparent 70%), var(--panel); border: 1px solid var(--line); }
+.yt-panel .hero-actions { justify-content: center; }
+.promo-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 2.5vw, 28px); margin-top: 40px; }
+.promo-strip .shot img { aspect-ratio: 9 / 16; object-fit: cover; }
+@media (max-width: 640px) {
+  .promo-strip { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 72%; overflow-x: auto;
+    scroll-snap-type: x mandatory; padding-bottom: 10px; margin-inline: -16px; padding-inline: 16px; scrollbar-width: thin; }
+  .promo-strip .shot { scroll-snap-align: center; }
+}
 .shot-phone { border-radius: 28px; border: 3px solid rgba(255,255,255,.12); }
 .zoo-shots .shot { display: flex; flex-direction: column; }
 .zoo-shots .shot img { aspect-ratio: 9 / 16; object-fit: cover; }
@@ -742,7 +752,6 @@ section { position: relative; }
   .attack-stage .slot-1.fighter, .attack-stage .slot-2.fighter { bottom: var(--floor); }
   .zoo-systems { margin-top: 44px; }
   .zoo-shots { grid-template-columns: 1fr; gap: 20px; }
-  .shot-phone { max-width: 300px; margin-inline: auto; }
   .yt-panel .btn { flex: 1 1 100%; }
   .testers-icon { width: 64px; height: 64px; border-radius: 16px; margin-right: 14px; }
   .build-stage { aspect-ratio: 16 / 11; }
