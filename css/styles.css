@@ -547,6 +547,122 @@ section { position: relative; }
 
 .scenes { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
 
+/* ---------- Botón YouTube ---------- */
+.btn-youtube { background: #ff0033; color: #fff; box-shadow: 0 10px 26px -12px rgba(255, 0, 51, .8); }
+.btn-youtube:hover { background: #ff2a55; }
+
+/* Icono del juego: imagen completa sin marco */
+.game-icon-full { padding: 0; background: none; border: 0; border-radius: 14px; box-shadow: 0 6px 16px -6px rgba(0,0,0,.6); }
+
+/* Icono en el bloque de testers */
+.testers-info { position: relative; }
+.testers-icon {
+  float: left; width: 96px; height: 96px; margin: 0 20px 6px 0; border-radius: 22px;
+  box-shadow: 0 10px 26px -10px rgba(0, 0, 0, .8);
+}
+.testers-steps { clear: both; }
+.testers-actions .btn-youtube { width: 100%; }
+
+/* ---------- Global Zoo: sistemas de juego ---------- */
+.zoo-systems { margin-top: 64px; }
+.system { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(20px, 4vw, 48px); align-items: center; margin-top: 30px; }
+.system-reverse { grid-template-columns: 1.25fr 1fr; }
+.system-reverse .system-text { order: 2; }
+.system > * { min-width: 0; }
+.system-tag {
+  display: inline-block; font-weight: 800; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase;
+  padding: 6px 13px; border-radius: 999px; margin-bottom: 12px;
+}
+.tag-attack { background: rgba(255, 61, 139, .14); color: var(--pink); border: 1px solid rgba(255, 61, 139, .4); }
+.tag-build { background: rgba(255, 197, 61, .12); color: var(--gold); border: 1px solid rgba(255, 197, 61, .4); }
+.system-title { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+.system-text p { color: var(--muted); }
+.features a { color: var(--text); text-decoration: underline; text-decoration-color: rgba(46, 230, 255, .5); text-underline-offset: 3px; }
+
+/* Escenario de ataque (reutiliza el estilo de .roster-stage) */
+.attack-stage.roster-stage { aspect-ratio: 16 / 9.5; --floor: 19%; }
+.attack-stage .a-1 { --c: 18%; --w: 36%; }
+.attack-stage .a-2 { --c: 51%; --w: 32%; }
+.attack-stage .a-3 { --c: 83%; --w: 31%; }
+.attack-stage .pedestal { left: calc(var(--c) - 13%); width: 26%; }
+.attack-stage .pedestal.a-1 { background: radial-gradient(closest-side, rgba(255,255,255,.22), rgba(182, 242, 58, .4) 55%, transparent 72%); box-shadow: 0 0 40px 6px rgba(182, 242, 58, .22); }
+.attack-stage .pedestal.a-2 { background: radial-gradient(closest-side, rgba(255,255,255,.22), rgba(255, 61, 139, .4) 55%, transparent 72%); box-shadow: 0 0 40px 6px rgba(255, 61, 139, .25); }
+.attack-stage .pedestal.a-3 { background: radial-gradient(closest-side, rgba(255,255,255,.22), rgba(160, 90, 255, .45) 55%, transparent 72%); box-shadow: 0 0 40px 6px rgba(160, 90, 255, .25); }
+
+/* Escenario de construcción */
+.build-stage { aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); background: #0d1124; }
+.build-stage .game-media-bg { filter: brightness(.55) saturate(1.1) blur(1.5px); transform: scale(1.04); }
+.build-card .tilt { transform: rotate(var(--r, 0deg)); transition: transform .3s ease; }
+.build-card.is-dragging .tilt { transform: rotate(0deg); }
+.build-card img { filter: drop-shadow(0 16px 20px rgba(0, 0, 0, .55)); }
+
+.zoo-shots { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: clamp(20px, 4vw, 48px); margin-top: 40px; align-items: center; }
+.yt-panel p { color: var(--muted); }
+.shot-phone { border-radius: 28px; border: 3px solid rgba(255,255,255,.12); }
+.zoo-shots .shot { display: flex; flex-direction: column; }
+.zoo-shots .shot img { aspect-ratio: 9 / 16; object-fit: cover; }
+.shot-phone img { object-position: top; }
+
+@media (max-width: 860px) {
+  .system, .system-reverse { grid-template-columns: 1fr; }
+  .system-reverse .system-text { order: 0; }
+}
+
+/* =========================================================
+   REACCIONES: los personajes se mueven al tocarlos / arrastrarlos
+   ========================================================= */
+.react { transform-origin: 50% 100%; will-change: transform; }
+.drag-item.is-dragging .react { animation: dance .55s ease-in-out infinite; }
+.react.r-jump   { animation: jump .7s cubic-bezier(.3, 1.5, .5, 1); }
+.react.r-spin   { animation: spin .8s ease-in-out; }
+.react.r-wiggle { animation: wiggle .6s ease-in-out; }
+.react.r-land   { animation: land .45s ease-out; }
+
+@keyframes dance {
+  0%   { transform: rotate(-9deg) translateY(0) scale(1); }
+  25%  { transform: rotate(0deg) translateY(-7%) scale(1.04, .97); }
+  50%  { transform: rotate(9deg) translateY(0) scale(1); }
+  75%  { transform: rotate(0deg) translateY(-7%) scale(1.04, .97); }
+  100% { transform: rotate(-9deg) translateY(0) scale(1); }
+}
+@keyframes jump {
+  0%   { transform: translateY(0) scale(1, 1); }
+  18%  { transform: translateY(0) scale(1.15, .82); }
+  45%  { transform: translateY(-32%) scale(.92, 1.1); }
+  70%  { transform: translateY(0) scale(1.12, .88); }
+  85%  { transform: translateY(-6%) scale(.98, 1.03); }
+  100% { transform: translateY(0) scale(1, 1); }
+}
+@keyframes spin {
+  0%   { transform: translateY(0) rotateY(0deg); }
+  40%  { transform: translateY(-18%) rotateY(200deg); }
+  100% { transform: translateY(0) rotateY(360deg); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  15% { transform: rotate(-14deg) scale(1.05); }
+  30% { transform: rotate(12deg) scale(1.05); }
+  45% { transform: rotate(-9deg); }
+  60% { transform: rotate(7deg); }
+  80% { transform: rotate(-3deg); }
+}
+@keyframes land {
+  0%   { transform: scale(1.18, .8); }
+  55%  { transform: scale(.94, 1.06); }
+  100% { transform: scale(1, 1); }
+}
+
+/* Chispas al tocar */
+.spark {
+  position: absolute; z-index: 70; left: 0; top: 0; pointer-events: none;
+  font-size: 18px; line-height: 1; translate: -50% -50%;
+  animation: spark .75s ease-out forwards;
+}
+@keyframes spark {
+  0%   { transform: translate(0, 0) scale(.4) rotate(0deg); opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)) scale(1.1) rotate(var(--rot)); opacity: 0; }
+}
+
 /* =========================================================
    AJUSTES PARA TABLETS Y MÓVILES
    ========================================================= */
@@ -621,6 +737,16 @@ section { position: relative; }
   .testers-steps { flex-direction: column; }
   .testers-actions .btn { width: 100%; }
 
+  .attack-stage.roster-stage { aspect-ratio: 16 / 11; --floor: 17%; }
+  .attack-stage .pedestal { left: calc(var(--c) - 14%); width: 28%; }
+  .attack-stage .slot-1.fighter, .attack-stage .slot-2.fighter { bottom: var(--floor); }
+  .zoo-systems { margin-top: 44px; }
+  .zoo-shots { grid-template-columns: 1fr; gap: 20px; }
+  .shot-phone { max-width: 300px; margin-inline: auto; }
+  .yt-panel .btn { flex: 1 1 100%; }
+  .testers-icon { width: 64px; height: 64px; border-radius: 16px; margin-right: 14px; }
+  .build-stage { aspect-ratio: 16 / 11; }
+
   .sponsor-card { padding: 20px; }
   .press-box { padding: 22px 18px; gap: 22px; }
   .press-box .btn { flex: 1 1 100%; }
@@ -663,6 +789,7 @@ section { position: relative; }
 @media (max-height: 500px) and (orientation: landscape) {
   .hero-stage { max-width: 420px; }
   .roster-stage { aspect-ratio: 16 / 6; }
+  .attack-stage.roster-stage, .build-stage { aspect-ratio: 16 / 7; }
 }
 
 /* ---------- Accesibilidad: menos movimiento ---------- */

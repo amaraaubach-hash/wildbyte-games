@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WildByte Games — Estudio indie de videojuegos para móvil</title>
-  <meta name="description" content="WildByte Games es un estudio indie de videojuegos. Creadores de Zoo: War of Paws y Crazy Cube Battle. Patrocinios, prensa y colaboraciones.">
+  <meta name="description" content="WildByte Games es un estudio indie de videojuegos. Creadores de Global Zoo: War of Paws y Crazy Cube Battle. Patrocinios, prensa y colaboraciones.">
   <meta name="theme-color" content="#0a0c16">
   <link rel="icon" type="image/svg+xml" href="assets/img/wildbyte-logo.svg">
 
   <!-- Vista previa al compartir en redes -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="WildByte Games — Estudio indie de videojuegos">
-  <meta property="og:description" content="Juegos de acción, batallas y gestión para móvil. Descubre Zoo: War of Paws y Crazy Cube Battle.">
-  <meta property="og:image" content="assets/img/crazy-cube-battle/logo-crazy-cube-battle.png">
+  <meta property="og:description" content="Juegos de acción, batallas y gestión para móvil. Descubre Global Zoo: War of Paws y Crazy Cube Battle.">
+  <meta property="og:image" content="assets/img/zoo-war-of-paws/icono.png">
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -49,8 +49,9 @@
       <div class="container">
         <div class="testers-card">
           <div class="testers-info">
+            <img class="testers-icon" src="assets/img/zoo-war-of-paws/icono.png" alt="" width="96" height="96">
             <span class="testers-pill">🧪 Buscamos testers</span>
-            <h2 class="testers-title" id="testers-title">¡Hazte tester de <span>Zoo: War of Paws</span>!</h2>
+            <h2 class="testers-title" id="testers-title">¡Hazte tester de <span>Global Zoo: War of Paws</span>!</h2>
             <p class="testers-text">Juega antes que nadie, ayúdanos a encontrar fallos y deja tu huella en el juego.</p>
             <ol class="testers-steps">
               <li><b>1</b> Pulsa «Unirme como tester»</li>
@@ -63,7 +64,8 @@
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.6v18.8c0 .5.5.8.9.6L21 12.9c.4-.2.4-.8 0-1L4.9 2c-.4-.2-.9.1-.9.6z"/></svg>
               Unirme como tester
             </a>
-            <a class="testers-help" href="mailto:amaraaubach@gmail.com?subject=Quiero%20ser%20tester%20de%20Zoo%3A%20War%20of%20Paws&amp;body=Hola%2C%20quiero%20ser%20tester.%20Mi%20correo%20de%20Google%20Play%20es%3A%20">
+            <a class="btn btn-youtube" href="https://youtube.com/@globalzoowarofpaws?si=9xZBjIema10RJPYS" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12 31 31 0 001 16.8a3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg> Ver en YouTube</a>
+            <a class="testers-help" href="mailto:amaraaubach@gmail.com?subject=Quiero%20ser%20tester%20de%20Global%20Zoo%3A%20War%20of%20Paws&amp;body=Hola%2C%20quiero%20ser%20tester.%20Mi%20correo%20de%20Google%20Play%20es%3A%20">
               ¿El enlace no te deja entrar? Escríbenos tu correo de Google y te añadimos
             </a>
           </div>
@@ -124,30 +126,21 @@
 
         <div class="games-grid">
 
-          <!-- ---------- Juego 1: Zoo: War of Paws ---------- -->
+          <!-- ---------- Juego 1: Global Zoo: War of Paws ---------- -->
           <article class="game-card" aria-labelledby="zoo-title">
             <div class="drag-zone game-media" data-drag-zone>
-              <!-- Hueco preparado: aparece mientras no exista assets/img/zoo-war-of-paws/portada.png -->
-              <div class="placeholder" aria-hidden="true">
-                <strong>Imagen próximamente</strong>
-                <span>Guarda la portada como</span>
-                <code>assets/img/zoo-war-of-paws/portada.png</code>
+              <img class="game-media-bg dim" src="assets/img/zoo-war-of-paws/captura-juego.jpg" alt="" loading="lazy" width="1280" height="1175">
+              <div class="drag-item" data-draggable tabindex="0" style="--x:32%;--y:6%;--w:36%" aria-label="Icono de Global Zoo: War of Paws, arrastrable">
+                <img src="assets/img/zoo-war-of-paws/icono.png" alt="Icono de Global Zoo: War of Paws" width="512" height="512" loading="lazy">
               </div>
-              <div class="drag-item" data-draggable tabindex="0" style="--x:10%;--y:8%;--w:80%" aria-label="Portada de Zoo: War of Paws, arrastrable">
-                <img src="assets/img/zoo-war-of-paws/portada.png" alt="Portada de Zoo: War of Paws"
-                     onload="this.closest('.game-media').querySelector('.placeholder').hidden=true"
-                     onerror="this.closest('.drag-item').remove()">
-              </div>
-              <span class="drag-hint" aria-hidden="true">✋ Arrastra la imagen</span>
+              <span class="drag-hint" aria-hidden="true">✋ Arrastra el icono</span>
               <button class="drag-reset" type="button" data-drag-reset>↺ Recolocar</button>
             </div>
 
             <div class="game-body">
               <div class="game-top">
-                <!-- Icono: guarda assets/img/zoo-war-of-paws/icono.png -->
-                <img class="game-icon" src="assets/img/zoo-war-of-paws/icono.png" alt="Icono de Zoo: War of Paws" width="60" height="60"
-                     onerror="this.onerror=null;this.src='assets/img/wildbyte-logo.svg'">
-                <h3 class="game-title" id="zoo-title">Zoo: War of Paws</h3>
+                <img class="game-icon game-icon-full" src="assets/img/zoo-war-of-paws/icono.png" alt="Icono de Global Zoo: War of Paws" width="60" height="60">
+                <h3 class="game-title" id="zoo-title">Global Zoo: War of Paws</h3>
               </div>
               <div class="badges">
                 <span class="badge badge-testing">En pruebas · Google Play</span>
@@ -159,9 +152,9 @@
                 zoológico. Constrúyelo, mejóralo y conviértelo en el más espectacular del planeta.
               </p>
               <ul class="features">
-                <li>Expediciones por distintos lugares del mundo</li>
                 <li>Captura animales con dardos tranquilizantes</li>
-                <li>Construye, decora y mejora tu zoológico</li>
+                <li><a href="#sistema-ataque">Sistema de ataque</a> con tus animales</li>
+                <li><a href="#sistema-construccion">Sistema de construcción</a> y defensa de tu territorio</li>
               </ul>
               <div class="game-actions">
                 <!-- Enlace para testers (prueba cerrada). Cuando el juego sea público cámbialo por:
@@ -169,6 +162,10 @@
                 <a class="btn btn-primary" href="https://play.google.com/apps/testing/com.globalzoo.pawofwars" target="_blank" rel="noopener">
                   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.6v18.8c0 .5.5.8.9.6L21 12.9c.4-.2.4-.8 0-1L4.9 2c-.4-.2-.9.1-.9.6z"/></svg>
                   Unirme como tester
+                </a>
+                <a class="btn btn-youtube" href="https://youtube.com/@globalzoowarofpaws?si=9xZBjIema10RJPYS" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12 31 31 0 001 16.8a3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg>
+                  YouTube
                 </a>
               </div>
             </div>
@@ -210,6 +207,93 @@
               </div>
             </div>
           </article>
+        </div>
+
+        <!-- ---------- Global Zoo: sistemas de juego ---------- -->
+        <div class="zoo-systems" id="global-zoo">
+          <div class="roster-head">
+            <div>
+              <p class="eyebrow" style="color:var(--lime)">Global Zoo: War of Paws</p>
+              <h3 class="showcase-title">Así se juega</h3>
+            </div>
+            <a class="btn btn-youtube btn-sm" href="https://youtube.com/@globalzoowarofpaws?si=9xZBjIema10RJPYS" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12 31 31 0 001 16.8a3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg> Ver gameplay en YouTube</a>
+          </div>
+
+          <!-- Sistema de ataque -->
+          <div class="system" id="sistema-ataque">
+            <div class="system-text">
+              <span class="system-tag tag-attack">⚔️ Sistema de ataque</span>
+              <h4 class="system-title">Lanza a tus bestias a la batalla</h4>
+              <p>Los animales que capturas forman tu escuadrón. Cada criatura tiene su propio estilo: elige bien a quién mandas al frente.</p>
+              <ul class="features">
+                <li>Cocodrilos, jabalíes, rinocerontes… y muchos más</li>
+                <li>Mejora a tus animales para que sean más fuertes</li>
+                <li>Escala puestos en el ranking global</li>
+              </ul>
+            </div>
+            <div class="drag-zone roster-stage attack-stage" data-drag-zone aria-label="Animales de ataque: tócalos o arrástralos">
+              <span class="pedestal a-1" aria-hidden="true"></span>
+              <span class="pedestal a-2" aria-hidden="true"></span>
+              <span class="pedestal a-3" aria-hidden="true"></span>
+              <div class="drag-item fighter a-1" data-draggable tabindex="0" aria-label="Cocodrilo, arrastrable">
+                <div class="float"><img src="assets/img/zoo-war-of-paws/animal-cocodrilo.png" alt="Cocodrilo de Global Zoo" width="560" height="373" loading="lazy"></div>
+              </div>
+              <div class="drag-item fighter a-2" data-draggable tabindex="0" aria-label="Jabalí, arrastrable">
+                <div class="float d1"><img src="assets/img/zoo-war-of-paws/animal-jabali.png" alt="Jabalí acorazado de Global Zoo" width="560" height="504" loading="lazy"></div>
+              </div>
+              <div class="drag-item fighter a-3" data-draggable tabindex="0" aria-label="Rinoceronte, arrastrable">
+                <div class="float d2"><img src="assets/img/zoo-war-of-paws/animal-rinoceronte.png" alt="Rinoceronte con cuerno de cristal de Global Zoo" width="560" height="437" loading="lazy"></div>
+              </div>
+              <span class="drag-hint" aria-hidden="true">👆 Tócalos o arrástralos</span>
+              <button class="drag-reset" type="button" data-drag-reset>↺ Recolocar</button>
+            </div>
+          </div>
+
+          <!-- Sistema de construcción -->
+          <div class="system system-reverse" id="sistema-construccion">
+            <div class="system-text">
+              <span class="system-tag tag-build">🏗️ Sistema de construcción</span>
+              <h4 class="system-title">¡Defiende tu territorio!</h4>
+              <p>Construye y mejora estructuras defensivas y atracciones para que tu zoo crezca y resista los ataques de otros jugadores.</p>
+              <ul class="features">
+                <li>Sube de nivel tus edificios con experiencia</li>
+                <li>Cartas de construcción temáticas: deporte, Navidad, Halloween…</li>
+                <li>Misiones, ruleta y regalos para avanzar más rápido</li>
+              </ul>
+            </div>
+            <div class="drag-zone build-stage" data-drag-zone aria-label="Cartas de construcción: arrástralas">
+              <img class="game-media-bg" src="assets/img/zoo-war-of-paws/parque-en-construccion.jpg" alt="" loading="lazy" width="1280" height="605">
+              <div class="drag-item build-card" data-draggable tabindex="0" style="--x:7%;--y:9%;--w:27%;--r:-10deg" aria-label="Carta de baloncesto, arrastrable">
+                <div class="tilt"><img src="assets/img/zoo-war-of-paws/carta-baloncesto.png" alt="Carta de construcción de baloncesto" width="480" height="660" loading="lazy"></div>
+              </div>
+              <div class="drag-item build-card" data-draggable tabindex="0" style="--x:36.5%;--y:5%;--w:27%;--r:0deg" aria-label="Carta de Navidad, arrastrable">
+                <div class="tilt"><img src="assets/img/zoo-war-of-paws/carta-navidad.png" alt="Carta de construcción navideña" width="480" height="660" loading="lazy"></div>
+              </div>
+              <div class="drag-item build-card" data-draggable tabindex="0" style="--x:66%;--y:9%;--w:27%;--r:10deg" aria-label="Carta de Halloween, arrastrable">
+                <div class="tilt"><img src="assets/img/zoo-war-of-paws/carta-halloween.png" alt="Carta de construcción de Halloween" width="480" height="660" loading="lazy"></div>
+              </div>
+              <span class="drag-hint" aria-hidden="true">✋ Arrastra las cartas</span>
+              <button class="drag-reset" type="button" data-drag-reset>↺ Recolocar</button>
+            </div>
+          </div>
+
+          <div class="zoo-shots">
+            <figure class="shot shot-phone">
+              <img src="assets/img/zoo-war-of-paws/promo-defiende-tu-territorio.jpg" alt="Global Zoo: ¡Defiende tu territorio! Construye y mejora estructuras defensivas" loading="lazy" width="720" height="1280">
+            </figure>
+            <div class="yt-panel">
+              <span class="system-tag tag-attack" style="background:rgba(255,0,51,.14);color:#ff4d6d;border-color:rgba(255,0,51,.45)">▶ YouTube</span>
+              <h4 class="system-title">Mira Global Zoo en acción</h4>
+              <p>Gameplay, novedades y avances del desarrollo en nuestro canal oficial. ¡Suscríbete para no perderte nada!</p>
+              <div class="hero-actions" style="margin-top:8px">
+                <a class="btn btn-youtube" href="https://youtube.com/@globalzoowarofpaws?si=9xZBjIema10RJPYS" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12 31 31 0 001 16.8a3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg>
+                  Ir al canal
+                </a>
+                <a class="btn btn-ghost" href="#testers">Hazte tester</a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- ---------- Galería interactiva de Crazy Cube Battle ---------- -->
@@ -311,6 +395,10 @@
               <span>Logo del estudio <small>· SVG</small></span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
             </a>
+            <a class="press-link" href="assets/img/zoo-war-of-paws/icono.png" download>
+              <span>Icono Global Zoo: War of Paws <small>· PNG 512×512</small></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            </a>
             <a class="press-link" href="assets/img/crazy-cube-battle/logo-crazy-cube-battle.png" download>
               <span>Logo Crazy Cube Battle <small>· PNG transparente</small></span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
@@ -362,6 +450,7 @@
           <li><a href="#juegos">Juegos</a></li>
           <li><a href="#patrocinadores">Patrocinadores / Prensa</a></li>
           <li><a href="privacidad.html">Política de Privacidad</a></li>
+          <li><a href="https://youtube.com/@globalzoowarofpaws?si=9xZBjIema10RJPYS" target="_blank" rel="noopener">YouTube</a></li>
           <li><a class="footer-mail" href="mailto:amaraaubach@gmail.com">amaraaubach@gmail.com</a></li>
         </ul>
       </div>

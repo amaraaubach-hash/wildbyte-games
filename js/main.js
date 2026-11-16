@@ -62,6 +62,47 @@
     el.style.transform = "translate3d(" + s.x + "px," + s.y + "px,0) rotate(" + s.rot + "deg)";
   }
 
+  /* --- Reacciones (saltar, girar, bailar...) --- */
+  var TAP_REACTIONS = ["r-jump", "r-spin", "r-wiggle"];
+  var SPARKS = ["✨", "⭐", "💥", "🐾", "💫"];
+
+  function getReact(el) { return el.querySelector(":scope > .react"); }
+
+  function playReaction(el, cls) {
+    var r = getReact(el);
+    if (!r) return;
+    r.classList.remove("r-jump", "r-spin", "r-wiggle", "r-land");
+    void r.offsetWidth; // reinicia la animación aunque se repita
+    r.classList.add(cls);
+  }
+
+  function burstSparks(el) {
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var zone = el.closest("[data-drag-zone]");
+    if (!zone) return;
+    var zr = zone.getBoundingClientRect(), er = el.getBoundingClientRect();
+    var cx = er.left - zr.left + er.width / 2, cy = er.top - zr.top + er.height * 0.35;
+    for (var i = 0; i < 7; i++) {
+      var sp = document.createElement("span");
+      var ang = (Math.PI * 2 * i) / 7 + Math.random() * 0.6;
+      var dist = 50 + Math.random() * 45;
+      sp.className = "spark";
+      sp.textContent = SPARKS[Math.floor(Math.random() * SPARKS.length)];
+      sp.style.left = cx + "px";
+      sp.style.top = cy + "px";
+      sp.style.setProperty("--dx", Math.cos(ang) * dist + "px");
+      sp.style.setProperty("--dy", Math.sin(ang) * dist + "px");
+      sp.style.setProperty("--rot", (Math.random() * 240 - 120) + "deg");
+      zone.appendChild(sp);
+      sp.addEventListener("animationend", function () { this.remove(); });
+    }
+  }
+
+  function tapReaction(el) {
+    playReaction(el, TAP_REACTIONS[Math.floor(Math.random() * TAP_REACTIONS.length)]);
+    burstSparks(el);
+  }
+
   // Límites: cuánto se puede desplazar el elemento sin salir de su zona
   function computeBounds(el) {
     var zone = el.closest("[data-drag-zone]") || el.parentElement;
@@ -160,8 +201,11 @@
     el.classList.remove("is-dragging");
     drag = null;
 
-    // Doble toque (táctil) para recolocar
+    if (moved >= 6) playReaction(el, "r-land");
+
+    // Toque simple = reacción. Doble toque = recolocar
     if (moved < 6) {
+      tapReaction(el);
       var now = performance.now();
       if (lastTap.el === el && now - lastTap.t < 320) {
         resetItem(el, true);
@@ -173,6 +217,17 @@
   }
 
   items.forEach(function (el) {
+    // Envoltorio interior para las animaciones de reacción
+    if (!getReact(el)) {
+      var wrap = document.createElement("div");
+      wrap.className = "react";
+      while (el.firstChild) wrap.appendChild(el.firstChild);
+      el.appendChild(wrap);
+      wrap.addEventListener("animationend", function (e) {
+        if (e.target === wrap) wrap.classList.remove("r-jump", "r-spin", "r-wiggle", "r-land");
+      });
+    }
+
     // Evita el "arrastrar imagen" nativo del navegador y el menú de mantener pulsado
     el.querySelectorAll("img").forEach(function (img) {
       img.setAttribute("draggable", "false");
@@ -241,6 +296,7 @@
       var step = e.shiftKey ? 40 : 12;
       var s = getState(el), b, handled = true;
       if (e.key === "Escape" || e.key === "0") { resetItem(el, true); return; }
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); tapReaction(el); return; }
       b = computeBounds(el);
       if (e.key === "ArrowLeft") s.x = clamp(s.x - step, b.minX, b.maxX);
       else if (e.key === "ArrowRight") s.x = clamp(s.x + step, b.minX, b.maxX);
