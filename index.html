@@ -54,20 +54,28 @@
             <h2 class="testers-title" id="testers-title">¡Hazte tester de <span>Global Zoo: War of Paws</span>!</h2>
             <p class="testers-text">Juega antes que nadie, ayúdanos a encontrar fallos y deja tu huella en el juego.</p>
             <ol class="testers-steps">
-              <li><b>1</b> Pulsa «Unirme como tester»</li>
-              <li><b>2</b> Acepta con tu cuenta de Google</li>
-              <li><b>3</b> Descarga el juego desde Google Play</li>
+              <li><b>1</b> Únete al grupo de testers de Google</li>
+              <li><b>2</b> Vuelve aquí y pulsa «Ya me he unido»</li>
+              <li><b>3</b> Descarga el juego en Google Play</li>
             </ol>
           </div>
           <div class="testers-actions">
-            <a class="btn btn-primary btn-lg" href="https://play.google.com/apps/testing/com.globalzoo.pawofwars" target="_blank" rel="noopener">
+            <!-- PASO 1: grupo de Google de testers -->
+            <a class="btn btn-primary btn-lg tester-step1" href="https://groups.google.com/g/tester-comunity-de-global-zoowar-of-paws" target="_blank" rel="noopener" data-tester-step1>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM19 8v6M22 11h-6"/></svg>
+              <span><small class="step-label">Paso 1</small> Unirme al grupo de testers</span>
+            </a>
+            <!-- PASO 2: ficha de Google Play (se resalta al volver del paso 1) -->
+            <a class="btn btn-lg tester-step2" href="https://play.google.com/store/apps/details?id=com.globalzoo.pawofwars" target="_blank" rel="noopener" data-tester-step2>
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.6v18.8c0 .5.5.8.9.6L21 12.9c.4-.2.4-.8 0-1L4.9 2c-.4-.2-.9.1-.9.6z"/></svg>
-              Unirme como tester
+              <span><small class="step-label">Paso 2</small> Ya me he unido · Ir a Google Play</span>
             </a>
+            <p class="tester-note" data-tester-note hidden>✅ ¡Genial! Cuando hayas entrado en el grupo, pulsa el <strong>Paso 2</strong> para descargar el juego.</p>
             <a class="btn btn-youtube" href="https://youtube.com/@globalzoowarofpaws?si=9xZBjIema10RJPYS" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12 31 31 0 001 16.8a3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg> Ver en YouTube</a>
-            <a class="testers-help" href="mailto:amaraaubach@gmail.com?subject=Quiero%20ser%20tester%20de%20Global%20Zoo%3A%20War%20of%20Paws&amp;body=Hola%2C%20quiero%20ser%20tester.%20Mi%20correo%20de%20Google%20Play%20es%3A%20">
-              ¿El enlace no te deja entrar? Escríbenos tu correo de Google y te añadimos
+            <a class="testers-help" href="mailto:wildbytegames2229@gmail.com?subject=Quiero%20ser%20tester%20de%20Global%20Zoo%3A%20War%20of%20Paws&amp;body=Hola%2C%20quiero%20ser%20tester.%20Mi%20correo%20de%20Google%20Play%20es%3A%20">
+              ¿Problemas para entrar? Escríbenos tu correo de Google y te añadimos
             </a>
+            <a class="testers-help" href="https://play.google.com/apps/testing/com.globalzoo.pawofwars" target="_blank" rel="noopener">¿Google Play dice que no está disponible? Activa la prueba aquí</a>
           </div>
         </div>
       </div>
@@ -157,9 +165,9 @@
                 <li><a href="#sistema-construccion">Sistema de construcción</a> y defensa de tu territorio</li>
               </ul>
               <div class="game-actions">
-                <!-- Enlace para testers (prueba cerrada). Cuando el juego sea público cámbialo por:
-                     https://play.google.com/store/apps/details?id=com.globalzoo.pawofwars -->
-                <a class="btn btn-primary" href="https://play.google.com/apps/testing/com.globalzoo.pawofwars" target="_blank" rel="noopener">
+                <!-- Lleva al bloque de testers (grupo de Google + Google Play).
+                     Cuando el juego sea público cámbialo por la ficha de Google Play. -->
+                <a class="btn btn-primary" href="#testers">
                   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.6v18.8c0 .5.5.8.9.6L21 12.9c.4-.2.4-.8 0-1L4.9 2c-.4-.2-.9.1-.9.6z"/></svg>
                   Unirme como tester
                 </a>
@@ -394,7 +402,7 @@
             <h3>Press Kit</h3>
             <p>Logos, capturas, personajes y ficha del estudio listos para usar en artículos, vídeos o propuestas comerciales.</p>
             <div class="hero-actions" style="margin-top:18px">
-              <a class="btn btn-primary" href="mailto:amaraaubach@gmail.com?subject=Propuesta%20de%20patrocinio%20-%20WildByte%20Games">
+              <a class="btn btn-primary" href="mailto:wildbytegames2229@gmail.com?subject=Propuesta%20de%20patrocinio%20-%20WildByte%20Games">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
                 Contacto comercial
               </a>
@@ -438,11 +446,11 @@
         <div class="contact-card">
           <div>
             <p style="color:var(--muted);margin:0 0 6px;font-weight:700">Escríbenos a</p>
-            <a class="contact-email" href="mailto:amaraaubach@gmail.com">amaraaubach@gmail.com</a>
+            <a class="contact-email" href="mailto:wildbytegames2229@gmail.com">wildbytegames2229@gmail.com</a>
           </div>
           <div class="contact-actions">
-            <a class="btn btn-secondary" href="mailto:amaraaubach@gmail.com?subject=Soporte%20-%20WildByte%20Games">Soporte</a>
-            <a class="btn btn-primary" href="mailto:amaraaubach@gmail.com?subject=Patrocinio%20%2F%20Prensa%20-%20WildByte%20Games">Patrocinio / Prensa</a>
+            <a class="btn btn-secondary" href="mailto:wildbytegames2229@gmail.com?subject=Soporte%20-%20WildByte%20Games">Soporte</a>
+            <a class="btn btn-primary" href="mailto:wildbytegames2229@gmail.com?subject=Patrocinio%20%2F%20Prensa%20-%20WildByte%20Games">Patrocinio / Prensa</a>
           </div>
         </div>
       </div>
@@ -462,7 +470,7 @@
           <li><a href="#patrocinadores">Patrocinadores / Prensa</a></li>
           <li><a href="privacidad.html">Política de Privacidad</a></li>
           <li><a href="https://youtube.com/@globalzoowarofpaws?si=9xZBjIema10RJPYS" target="_blank" rel="noopener">YouTube</a></li>
-          <li><a class="footer-mail" href="mailto:amaraaubach@gmail.com">amaraaubach@gmail.com</a></li>
+          <li><a class="footer-mail" href="mailto:wildbytegames2229@gmail.com">wildbytegames2229@gmail.com</a></li>
         </ul>
       </div>
       <p class="copyright">© <span id="year">2026</span> WildByte Games. Todos los derechos reservados. Google Play y el logotipo de Google Play son marcas de Google LLC.</p>

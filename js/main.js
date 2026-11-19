@@ -31,6 +31,23 @@
     });
   }
 
+  /* ---------- Testers: flujo en 2 pasos (grupo de Google -> Google Play) ---------- */
+  var step1 = document.querySelector("[data-tester-step1]");
+  if (step1) {
+    var card = step1.closest(".testers-card");
+    var note = document.querySelector("[data-tester-note]");
+    var KEY = "gz-tester-step1";
+    var markDone = function () {
+      if (card) card.classList.add("step1-done");
+      if (note) note.hidden = false;
+    };
+    try { if (localStorage.getItem(KEY) === "1") markDone(); } catch (_) {}
+    step1.addEventListener("click", function () {
+      markDone();
+      try { localStorage.setItem(KEY, "1"); } catch (_) {}
+    });
+  }
+
   /* ---------- 2) Año del copyright ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();

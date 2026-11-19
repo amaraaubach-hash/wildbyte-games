@@ -673,6 +673,23 @@ section { position: relative; }
   100% { transform: translate(var(--dx), var(--dy)) scale(1.1) rotate(var(--rot)); opacity: 0; }
 }
 
+/* ---------- Flujo de testers en 2 pasos ---------- */
+.testers-actions .btn-lg { width: 100%; text-align: left; justify-content: flex-start; border-radius: 18px; }
+.testers-actions .btn-lg span { display: flex; flex-direction: column; line-height: 1.15; }
+.step-label { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; opacity: .85; font-weight: 800; }
+.tester-step2 {
+  background: rgba(255, 255, 255, .05); color: var(--muted); border-color: rgba(255, 255, 255, .18);
+}
+.tester-step2:hover { color: var(--text); border-color: var(--lime); }
+.testers-card.step1-done .tester-step1 { background: rgba(182, 242, 58, .12); color: var(--lime); border-color: rgba(182, 242, 58, .45); box-shadow: none; }
+.testers-card.step1-done .tester-step1 .step-label::after { content: " ✓"; }
+.testers-card.step1-done .tester-step2 {
+  background: linear-gradient(135deg, var(--lime), #2fd37a); color: #0b1404; border-color: transparent;
+  box-shadow: 0 10px 30px -10px rgba(182, 242, 58, .8); animation: step-pulse 1.8s ease-in-out infinite;
+}
+@keyframes step-pulse { 50% { box-shadow: 0 0 0 6px rgba(182, 242, 58, .18), 0 10px 30px -10px rgba(182, 242, 58, .8); } }
+.tester-note { margin: 0; font-size: .88rem; color: var(--lime); font-weight: 600; text-align: center; }
+
 /* =========================================================
    AJUSTES PARA TABLETS Y MÓVILES
    ========================================================= */
