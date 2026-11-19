@@ -551,6 +551,10 @@ section { position: relative; }
 /* ---------- Botón YouTube ---------- */
 .btn-youtube { background: #ff0033; color: #fff; box-shadow: 0 10px 26px -12px rgba(255, 0, 51, .8); }
 .btn-youtube:hover { background: #ff2a55; }
+.btn-discord { background: #5865f2; color: #fff; box-shadow: 0 10px 26px -12px rgba(88, 101, 242, .9); }
+.btn-discord:hover { background: #6b77ff; }
+.testers-actions .btn-discord { width: 100%; }
+.head-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 
 /* Icono del juego: imagen completa sin marco */
 .game-icon-full { padding: 0; background: none; border: 0; border-radius: 14px; box-shadow: 0 6px 16px -6px rgba(0,0,0,.6); }
