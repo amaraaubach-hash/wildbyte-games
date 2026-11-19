@@ -17,7 +17,10 @@ wildbyte-games/            ← raíz del sitio (esta carpeta se sube entera)
     ├── fonts/             ← fuentes autoalojadas (sin Google Fonts → mejor para el RGPD)
     ├── press/wildbyte-presskit.zip
     └── img/
-        ├── wildbyte-logo.svg
+        ├── wildbyte-logo-original.jpg ← logo completo (press kit)
+        ├── wildbyte-emblema-grande.png ← lobo en la portada
+        ├── wildbyte-emblema.png   ← lobo (menú y pie)
+        ├── favicon-*.png          ← icono de la pestaña
         ├── crazy-cube-battle/   ← imágenes ya sin fondo
         └── zoo-war-of-paws/     ← pon aquí icono.png y portada.png (ver LEEME.txt)
 ```

@@ -121,9 +121,9 @@ p { margin: 0 0 1em; }
 }
 .nav { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none !important; }
-.brand-logo { width: 40px; height: 40px; flex: none; }
+.brand-logo { width: auto; height: 50px; flex: none; margin: 0 -6px 0 -10px; }
 .brand-name { font-family: var(--font-display); font-size: 1.45rem; letter-spacing: .02em; }
-.brand-name span { color: var(--pink); }
+.brand-name span { color: #3fc8ff; }
 
 .nav-links { display: flex; align-items: center; gap: 6px; list-style: none; margin: 0; padding: 0; }
 .nav-links a {
@@ -181,6 +181,7 @@ section { position: relative; }
 .hero { padding: clamp(40px, 6vw, 80px) 0 clamp(40px, 6vw, 70px); overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(24px, 4vw, 60px); align-items: center; }
 .hero-title { font-size: clamp(2.6rem, 6.4vw, 4.8rem); margin-bottom: .35em; }
+.hero-logo { width: clamp(220px, 28vw, 340px); height: auto; margin: -10px 0 4px -30px; }
 .hero-title .grad {
   background: linear-gradient(90deg, var(--lime), var(--cyan) 45%, var(--pink));
   -webkit-background-clip: text; background-clip: text; color: transparent;
@@ -725,7 +726,7 @@ section { position: relative; }
   .section-head { margin-bottom: 30px; }
   .section-lead { font-size: 1.02rem; }
   .brand-name { font-size: 1.25rem; }
-  .brand-logo { width: 34px; height: 34px; }
+  .brand-logo { width: auto; height: 38px; }
 
   .hero { padding-top: 32px; }
   .hero-text { font-size: 1.05rem; }
