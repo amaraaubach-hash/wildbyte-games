@@ -557,6 +557,7 @@ section { position: relative; }
 .head-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 
 /* Icono del juego: imagen completa sin marco */
+.game-icon-wide { width: 104px; height: 66px; padding: 0; background: none; border: 0; border-radius: 0; filter: drop-shadow(0 4px 8px rgba(0,0,0,.5)); }
 .game-icon-full { padding: 0; background: none; border: 0; border-radius: 14px; box-shadow: 0 6px 16px -6px rgba(0,0,0,.6); }
 
 /* Icono en el bloque de testers */
@@ -789,6 +790,7 @@ section { position: relative; }
   .game-body { padding: 20px 18px 22px; }
   .game-title { font-size: 1.45rem; }
   .game-icon { width: 52px; height: 52px; border-radius: 14px; }
+  .game-icon.game-icon-wide { width: 88px; height: 56px; border-radius: 0; }
   .game-actions .btn { flex: 1 1 auto; }
 
 
